@@ -44,7 +44,7 @@ router.post('/login', (req, res) => {
             if (data.length) {
                 let comparePassword = bcrypt.compareSync(req.body.password, data[0].password)
                 if (comparePassword) {
-                    res.send("user login hogaya")
+                    res.send("user login successfully")
                 } else {
                     res.send("password invalid")
                 }
